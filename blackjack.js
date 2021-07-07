@@ -5,23 +5,25 @@ console.log(secondCard)
 let sum = firstCard + secondCard
 console.log(sum)
 let hasBlackJack = false
-let isAlive=true;
+let isAlive = true;
 let message;
-if (sum <= 20){
-   message= console.log("Do you want to draw a new card?")
-    isAlive=false;
-}
-else if (sum === 21) {
-    message=console.log("woohoo! You got blackjack")
-    hasBlackJack = true
-}
-else
-    {message=console.log("You're out of the game")
-isAlive=false
+
+function startGame() {
+    if (sum <= 20) {
+        message = console.log("Do you want to draw a new card?")
+
     }
-console.log(hasBlackJack)
+    else if (sum === 21) {
+        message = console.log("woohoo! You got blackjack")
+        hasBlackJack = true
+    }
+    else {
+        message = console.log("You're out of the game")
+        isAlive = false
+    }
 
-console.log(message)
 
+    console.log(message)
 
+}
 

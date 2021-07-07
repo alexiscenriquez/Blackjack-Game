@@ -1,6 +1,8 @@
 h1{
     color:goldenrod;
     text-align: center;
+    margin-bottom: 50px;
+    
 }
 
 body{
@@ -10,8 +12,21 @@ font-weight: bold;
 background-size: cover;
 text-align: center;
 color:white;
+
+
 }
 
 #message-el{
 font-style: italic;
 }
+#button-el{
+    background-color: goldenrod;
+    color: #016f32;;
+  width: 150px;
+  font-size: large;
+  padding-top: 5px;
+padding-bottom: 5px;
+font-weight: bold;
+border: none;
+border-radius: 2px;
+    }
