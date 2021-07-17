@@ -38,7 +38,9 @@ function startGame() {
 }
 function newGame() {
     console.log("Drawing a new card from the deck")
-    let firstCard = Math.floor(Math.random() * (11 - 2 + 1) + 2);
-    sum += firstCard;
+    let card = Math.floor(Math.random() * (11 - 2 + 1) + 2);
+    cards.push(card);
+    sum += card;
     renderGame();
 }
+
