@@ -6,16 +6,18 @@ let message;
 let messageEl = document.getElementById("message-el");
 let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.getElementById("cards-el");
-let firstCard = Math.floor(Math.random() * (11 - 2 + 1) + 2);
-let secondCard = Math.floor(Math.random() * (11 - 2 + 1) + 2);
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 console.log(firstCard)
 console.log(secondCard)
 let sum = firstCard + secondCard
 let cards = [firstCard, secondCard]
+
 function renderGame() {
-
-
-
+    cardsEl.textContent = "Cards: "
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + " ";
+    }
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
 
@@ -30,7 +32,11 @@ function renderGame() {
     }
     messageEl.textContent = message;
     sumEl.textContent = `Sum: ${sum}`
-    cardsEl.textContent = `Cards: ${cards[0]},${cards[1]}`
+
+
+}
+function getRandomCard() {
+    return Math.floor(Math.random() * (11 - 2 + 1) + 2);
 }
 
 function startGame() {
@@ -38,9 +44,18 @@ function startGame() {
 }
 function newGame() {
     console.log("Drawing a new card from the deck")
-    let card = Math.floor(Math.random() * (11 - 2 + 1) + 2);
+    let card = getRandomCard()
     cards.push(card);
     sum += card;
     renderGame();
 }
 
+let hasSolvedChallenge=false
+let hasHintsLeft=false
+if(hasHintsLeft===false&&hasSolvedChallenge===false)
+{
+    showSolution();
+}
+function showSolution(){
+    console.log("Showing The Solution")
+}
